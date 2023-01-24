@@ -10,4 +10,14 @@ RSpec.describe Todo do
         todo = Todo.new("Order Grocery")
         expect(todo.task).to eq "Order Grocery"
     end
+
+    it "returns true for the completed tasks" do
+        todo = Todo.new("Order Grocery")
+        expect(todo.mark_done!).to be true
+    end
+
+    it "returns true if the task has been finished" do
+        todo = Todo.new("Order Grocery")
+        expect(todo.done?).to be false
+    end
 end

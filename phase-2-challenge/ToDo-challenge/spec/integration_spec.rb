@@ -19,13 +19,12 @@ RSpec.describe "Todo Integration" do
       expect(todo.complete).to eq [task]
     end
 
-    it "returns completed tasks" do
+    it "returns the list of given up tasks" do
       todo = TodoList.new()
       task = Todo.new("Order Grocery")
       task_2 = Todo.new("Cook Dinner")
       todo.add(task)
       todo.add(task_2)
-      task.mark_done!
-      expect(todo.complete).to eq [task]
+      expect(todo.give_up!).to eq [task, task_2]
     end
 end
