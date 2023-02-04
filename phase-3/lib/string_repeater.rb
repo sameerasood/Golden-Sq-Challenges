@@ -14,3 +14,6 @@ class StringRepeater
         @terminal.puts "Here is your result: #{string}" 
     end
 end
+
+string_repeater = StringRepeater.new(Kernel)
+string_repeater.run
