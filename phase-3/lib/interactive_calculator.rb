@@ -11,6 +11,8 @@ class InteractiveCalculator
         number_2 = @terminal.gets.chomp
         result = (number_1).to_i - (number_2).to_i
         @terminal.puts "Here's your result: #{number_1} - #{number_2} = #{result}"
-    end
-        
+    end     
 end
+
+result = InteractiveCalculator.new(Kernel)
+result.run
